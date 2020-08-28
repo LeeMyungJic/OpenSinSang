@@ -17,8 +17,7 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         
         var items:ItemsSetting = ItemsSetting()
-        items.setItem()
-        items.setCategory()
+       
         category = ItemsSetting.Categories
         
         BrandTable.delegate = self

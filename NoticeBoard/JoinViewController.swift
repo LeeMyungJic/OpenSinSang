@@ -1,16 +1,15 @@
 //
-//  SearchViewController.swift
+//  JoinViewController.swift
 //  NoticeBoard
 //
-//  Created by 이명직 on 2020/08/25.
+//  Created by 이명직 on 2020/08/28.
 //  Copyright © 2020 LMJ. All rights reserved.
 //
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class JoinViewController: UIViewController {
 
-    @IBOutlet weak var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
 

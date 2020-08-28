@@ -27,12 +27,6 @@ class CollectionViewController: UIViewController,UICollectionViewDelegate,UIColl
                 }
             }
         }
-        
-        //여기서 카테고리 맞는거 넣기
-        
-        //setItem()
-        
-    
     }
     
     
@@ -80,6 +74,7 @@ class CollectionViewController: UIViewController,UICollectionViewDelegate,UIColl
     }
     
     
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
         //이미지 카운터 하는 함수
@@ -87,7 +82,6 @@ class CollectionViewController: UIViewController,UICollectionViewDelegate,UIColl
         return items.count
 
     }
-
     //셀 구성하기
     
     
@@ -98,6 +92,7 @@ class CollectionViewController: UIViewController,UICollectionViewDelegate,UIColl
         
         
         cell.image.image = resize(getImage: items[indexPath.row].image!)
+        //cell.image.image = items[indexPath.row].image!
         cell.label.text = items[indexPath.row].title
         
         // 셀 디자인
@@ -110,7 +105,6 @@ class CollectionViewController: UIViewController,UICollectionViewDelegate,UIColl
         return cell
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(identifier: "ItemDetailViewController") as! ItemDetailViewController
@@ -119,12 +113,11 @@ class CollectionViewController: UIViewController,UICollectionViewDelegate,UIColl
     }
     
 
-
-
     func resize(getImage:UIImage) -> UIImage {
+        
+        let wif = CollectionViewMain.layer.borderWidth
         var new_image : UIImage!
-
-        let size = CGSize(width:  150  , height: 150 )
+        let size = CGSize(width:  120  , height: 120 )
 
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
 
@@ -135,7 +128,7 @@ class CollectionViewController: UIViewController,UICollectionViewDelegate,UIColl
         new_image = UIGraphicsGetImageFromCurrentImageContext()!
 
         UIGraphicsEndImageContext()
-        
+
         return new_image
     }
     

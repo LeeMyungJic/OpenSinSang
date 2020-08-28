@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DA54D77E24F51B8000362E11 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54D77D24F51B8000362E11 /* InfoViewController.swift */; };
 		DA54D78024F51B9000362E11 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54D77F24F51B9000362E11 /* SearchViewController.swift */; };
+		DA54D7A224F8F5AB00362E11 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54D7A124F8F5AB00362E11 /* LoginViewController.swift */; };
+		DA54D7A424F9002200362E11 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54D7A324F9002200362E11 /* JoinViewController.swift */; };
 		DA5519E324E29158008E009E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5519E224E29158008E009E /* AppDelegate.swift */; };
 		DA5519E524E29158008E009E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5519E424E29158008E009E /* SceneDelegate.swift */; };
 		DA5519E724E29158008E009E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5519E624E29158008E009E /* ViewController.swift */; };
@@ -29,6 +31,8 @@
 /* Begin PBXFileReference section */
 		DA54D77D24F51B8000362E11 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		DA54D77F24F51B9000362E11 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DA54D7A124F8F5AB00362E11 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DA54D7A324F9002200362E11 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		DA5519DF24E29158008E009E /* NoticeBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoticeBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5519E224E29158008E009E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA5519E424E29158008E009E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 				DA551A6124EFCD94008E009E /* ItemsSetting.swift */,
 				DA54D77D24F51B8000362E11 /* InfoViewController.swift */,
 				DA54D77F24F51B9000362E11 /* SearchViewController.swift */,
+				DA54D7A124F8F5AB00362E11 /* LoginViewController.swift */,
+				DA54D7A324F9002200362E11 /* JoinViewController.swift */,
 			);
 			path = NoticeBoard;
 			sourceTree = "<group>";
@@ -173,7 +179,9 @@
 			files = (
 				DA5519F924E29AAB008E009E /* ItemDetailViewController.swift in Sources */,
 				DA551A5824EE6430008E009E /* Item.swift in Sources */,
+				DA54D7A424F9002200362E11 /* JoinViewController.swift in Sources */,
 				DA5519E724E29158008E009E /* ViewController.swift in Sources */,
+				DA54D7A224F8F5AB00362E11 /* LoginViewController.swift in Sources */,
 				DA5519F724E29777008E009E /* Type1.swift in Sources */,
 				DA551A5024E91C73008E009E /* CollectionViewCell.swift in Sources */,
 				DA551A5224E91D1C008E009E /* CollectionViewController.swift in Sources */,
