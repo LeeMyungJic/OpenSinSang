@@ -12,6 +12,9 @@ class JoinViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.purple
+        self.navigationController?.navigationBar.topItem?.title = ""
 
         // Do any additional setup after loading the view.
     }

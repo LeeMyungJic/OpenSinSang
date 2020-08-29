@@ -27,8 +27,7 @@ class ItemCreateViewController: UIViewController,UIImagePickerControllerDelegate
         super.viewDidLoad()
     
         imagePicker.delegate = self
-        self.getImageButton.layer.borderColor = UIColor.black.cgColor
-        self.getImageButton.layer.cornerRadius = 8
+        
         
         createPickerView()
         dismissPickerView()

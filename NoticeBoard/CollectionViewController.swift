@@ -15,6 +15,7 @@ class CollectionViewController: UIViewController,UICollectionViewDelegate,UIColl
     override func viewDidLoad() {
 
         super.viewDidLoad()
+        self.navigationController?.navigationBar.topItem?.title = ""
         CategoryTitle.text = CollectionViewController.receivedCategoey
         
         if CollectionViewController.receivedCategoey == "전체보기" {

@@ -20,7 +20,7 @@ class ItemDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.navigationController?.navigationBar.topItem?.title = ""
         self.imageMain.image = receievedImage
         
         if let str = itemTitle {

@@ -15,7 +15,9 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var BrandTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.tintColor = UIColor.purple
+        self.navigationController?.navigationBar.topItem?.title = ""
+
         var items:ItemsSetting = ItemsSetting()
        
         category = ItemsSetting.Categories
