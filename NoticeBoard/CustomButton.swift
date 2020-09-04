@@ -10,14 +10,14 @@ import UIKit
 
 class CustomButton: UIButton {
 
-    required init(coder aDecoder: NSCoder){
-        super.init(coder: aDecoder)!
-        self.layer.cornerRadius = 5.0;
-        //self.backgroundColor = UIColor(red: 255/255, green: 132/255, blue: 102/255, alpha: 1)
-        self.backgroundColor = UIColor.clear
-        self.tintColor = UIColor.white
+    static let buttonColor = #colorLiteral(red: 0.919944346, green: 0.5834438205, blue: 0.7190411687, alpha: 1)
+    
+    static func setButton(button: UIButton) -> UIButton{
+        button.layer.borderColor = buttonColor.cgColor
+        button.layer.borderWidth = 1
+        button.layer.cornerRadius = 10
+        
+        return button
         
     }
-
-
 }

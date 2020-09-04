@@ -14,6 +14,7 @@ class ItemCreateViewController: UIViewController,UIImagePickerControllerDelegate
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var getImageButton: UIButton!
+    @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var brandName: UITextField!
     @IBOutlet weak var ProductName: UITextField!
     
@@ -27,6 +28,8 @@ class ItemCreateViewController: UIViewController,UIImagePickerControllerDelegate
         super.viewDidLoad()
     
         imagePicker.delegate = self
+        getImageButton = CustomButton.setButton(button: getImageButton)
+        addButton = CustomButton.setButton(button: addButton)
         
         
         createPickerView()
@@ -111,6 +114,7 @@ class ItemCreateViewController: UIViewController,UIImagePickerControllerDelegate
                 UIImageWriteToSavedPhotosAlbum(captureImage, self, nil, nil)
             }
             imageView.image = captureImage
+            imageView.backgroundColor = nil
         }
         // 현재의 뷰(이미지 피커) 제거
         self.dismiss(animated: true, completion: nil)
@@ -138,7 +142,7 @@ class ItemCreateViewController: UIViewController,UIImagePickerControllerDelegate
             if let tempImage = imageView.image {
                 if let category = brandName.text {
                     //controller.items.append(Item(title: str, image: tempImage))
-                    ItemsSetting.Items.append(Item(title: str, image: tempImage, category: category))
+                    ItemsSetting.Items.append(Item(title: str, image: tempImage, category: category, rating: 0))
                     
                     ProductName.text = ""
                     imageView.image = nil
@@ -191,6 +195,12 @@ class ItemCreateViewController: UIViewController,UIImagePickerControllerDelegate
             toolBar.setItems([button], animated: true)
             toolBar.isUserInteractionEnabled = true
             brandName.inputAccessoryView = toolBar
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+
+          self.view.endEditing(true)
+
     }
     
 }

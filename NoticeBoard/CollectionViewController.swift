@@ -71,6 +71,7 @@ class CollectionViewController: UIViewController,UICollectionViewDelegate,UIColl
         
         destinationViewController.receievedImage = items[selectedIndexPath.row].image!
         destinationViewController.itemTitle = items[selectedIndexPath.row].title
+        destinationViewController.index = selectedIndexPath.row
         
     }
     
@@ -91,10 +92,11 @@ class CollectionViewController: UIViewController,UICollectionViewDelegate,UIColl
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
         
-        
+        cell.rating.text = "추천 \(items[indexPath.row].rating!)"
         cell.image.image = resize(getImage: items[indexPath.row].image!)
         //cell.image.image = items[indexPath.row].image!
         cell.label.text = items[indexPath.row].title
+        
         
         // 셀 디자인
         //cell.layer.borderColor = UIColor.black.cgColor
@@ -111,6 +113,7 @@ class CollectionViewController: UIViewController,UICollectionViewDelegate,UIColl
         let controller = storyboard.instantiateViewController(identifier: "ItemDetailViewController") as! ItemDetailViewController
         
         controller.itemTitle = items[indexPath.row].title
+        //controller.index = indexPath.row
     }
     
 

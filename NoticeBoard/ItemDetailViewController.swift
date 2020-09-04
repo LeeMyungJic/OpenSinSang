@@ -14,7 +14,9 @@ class ItemDetailViewController: UIViewController {
     @IBOutlet weak var labelMain: UILabel!
     
     var imageUrl: String?
+    var index: Int!
     var receievedImage: UIImage?
+    @IBOutlet weak var rating: UILabel!
     var itemTitle: String?
     
     override func viewDidLoad() {
@@ -26,18 +28,12 @@ class ItemDetailViewController: UIViewController {
         if let str = itemTitle {
             self.labelMain.text = str
         }
+        rating.text = "\(index!)"
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func plusRating(_ sender: Any) {
+        ItemsSetting.Items[index].rating = ItemsSetting.Items[index].rating! + 1
+        rating.text = "\(ItemsSetting.Items[index].rating!)"
     }
-    */
-
 }

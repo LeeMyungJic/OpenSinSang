@@ -13,11 +13,13 @@ class Item {
     var image: UIImage?
     let title: String?
     let category: String?
-    init(title: String, image: UIImage, category: String) {
+    var rating: Int?
+    init(title: String, image: UIImage, category: String, rating: Int) {
         
         self.image = image
         self.title = title
         self.category = category
+        self.rating = rating
         
     }
 }

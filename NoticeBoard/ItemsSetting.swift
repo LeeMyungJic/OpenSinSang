@@ -9,7 +9,7 @@
 import UIKit
 
 class ItemsSetting {
-    static var Items = [Item(title: "MacBookPro", image: UIImage(named: "macbookPro")!, category: "Apple"), Item(title: "IPhone", image: UIImage(named: "iphone")!, category: "Apple"), Item(title: "AirPodsPro", image: UIImage(named: "airpodPro")!, category: "Apple"), Item(title: "MacbookAir", image: UIImage(named: "macbookAir")!, category: "Apple"), Item(title: "SamsungBook", image: UIImage(named: "samsung")!, category: "Samsung")]
+    static var Items = [Item(title: "MacBookPro", image: UIImage(named: "macbookPro")!, category: "Apple", rating: 0), Item(title: "IPhone", image: UIImage(named: "iphone")!, category: "Apple", rating: 0), Item(title: "AirPodsPro", image: UIImage(named: "airpodPro")!, category: "Apple", rating: 0), Item(title: "MacbookAir", image: UIImage(named: "macbookAir")!, category: "Apple", rating: 0), Item(title: "SamsungBook", image: UIImage(named: "samsung")!, category: "Samsung", rating: 0)]
     static var Categories = ["전체보기", "Apple", "Samsung", "LG"]
     
 //    func setItem() {
